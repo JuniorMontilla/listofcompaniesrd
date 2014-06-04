@@ -1,5 +1,6 @@
 #!usr/bin/env python
 # -*- coding: utf-8 -*-
+#python version 2.7.6
 #by Junior Montilla
 
 from urllib import urlopen, urlencode
