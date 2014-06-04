@@ -14,7 +14,6 @@ if len(argv) > 1:
                 soup = BeautifulSoup(reading)
                 for elements in soup.find_all("div", class_="__info"):
                          item = elements.get_text()
-                         print item
                          persistense = open("listofcompanies.txt", 'a')
                          persistense.write(item.encode('utf-8'))
                 persistense.close()
