@@ -8,8 +8,8 @@ from bs4 import BeautifulSoup
 from sys import argv
 
 if len(argv) > 1:
-        for numberofpages in range(5068):
-                data = urlencode({"st":argv[1], "page": numberofpages})
+        for numberofregisters in range(5068):
+                data = urlencode({"st":argv[1], "page": numberofregisters})
                 reading = urlopen("http://www.camarasantodomingo.do/red-empresarial/busqueda?%s" % data)
                 soup = BeautifulSoup(reading)
                 for elements in soup.find_all("div", class_="__info"):
