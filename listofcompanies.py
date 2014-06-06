@@ -28,7 +28,6 @@ if len(argv) > 1:
                                data[4].get_text(),
                                 
                                  )
-            print datatostorage
             cursor.execute('''
                    CREATE TABLE IF NOT EXISTS Companies
                    (nameofcompany text, place text, phone text, email text, website text)
