@@ -12,7 +12,6 @@ database = sqlite3.connect('companies.db')
 cursor = database.cursor()
 
 if len(argv) > 1:
-<<<<<<< HEAD
     for pages in range(int(argv[1])):
         data = urlencode({'st':'advanced', 'page': pages})
         output = urlopen('http://www.camarasantodomingo.do/red-empresarial/busqueda?%s' % data)
@@ -38,14 +37,3 @@ if len(argv) > 1:
             cursor.execute('INSERT INTO Companies VALUES(?,?,?,?,?)', datatostorage)
         database.commit()
     database.close()
-=======
-        for numberofregisters in range(5068):
-                data = urlencode({"st":argv[1], "page": numberofregisters})
-                reading = urlopen("http://www.camarasantodomingo.do/red-empresarial/busqueda?%s" % data)
-                soup = BeautifulSoup(reading)
-                for elements in soup.find_all("div", class_="__info"):
-                         item = elements.get_text()
-                         persistense = open("listofcompanies.txt", 'a')
-                         persistense.write(item.encode('utf-8'))
-                persistense.close()
->>>>>>> 20154d71723496a71c720e9f97611f1b06fa1a30
